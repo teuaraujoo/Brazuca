@@ -1,7 +1,7 @@
 :root {
-    --primary: #8a2be2;
-    --secondary: #00bfff;
-    --accent: #ff6b6b;
+    --primary: #ffd700;
+    --secondary: #ffeb3b;
+    --accent: #ffc107;
     --dark: #121212;
     --darker: #0a0a0a;
     --light: #f5f5f5;
@@ -24,6 +24,10 @@ body {
     overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 /* Header */
 header {
     background: rgba(18, 18, 18, 0.9);
@@ -36,7 +40,7 @@ header {
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    border-bottom: 1px solid rgba(138, 43, 226, 0.3);
+    border-bottom: 1px solid rgba(201, 222, 38, 0.3);
 }
 
 .logo {
@@ -152,7 +156,7 @@ nav ul li a:hover::after {
 }
 
 .hero {
-    background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(0, 191, 255, 0.2)), 
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 235, 59, 0.2)), 
                 url('https://images.unsplash.com/photo-1558769132-cb25e5b8c3a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');
     background-size: cover;
     background-position: center;
@@ -210,14 +214,14 @@ nav ul li a:hover::after {
     transition: var(--transition);
     border: none;
     cursor: pointer;
-    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
     position: relative;
     overflow: hidden;
 }
 
 .btn:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(138, 43, 226, 0.6);
+    box-shadow: 0 10px 20px rgba(217, 226, 43, 0.4);
 }
 
 .btn::after {
@@ -278,18 +282,18 @@ nav ul li a:hover::after {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     transition: var(--transition);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(138, 43, 226, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     position: relative;
 }
 
 .product-card:hover {
     transform: translateY(-15px);
-    box-shadow: 0 15px 30px rgba(138, 43, 226, 0.4);
-    border-color: rgba(138, 43, 226, 0.5);
+    box-shadow: 0 15px 30px rgba(217, 226, 43, 0.4);
+    border-color: rgba(229, 248, 19, 0.5);
 }
 
 .product-image {
-    height: 220px;
+    height: 280px;
     background: linear-gradient(135deg, var(--gray), var(--dark));
     display: flex;
     align-items: center;
@@ -299,8 +303,8 @@ nav ul li a:hover::after {
 }
 
 .product-image img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     transition: var(--transition);
 }
@@ -380,7 +384,7 @@ nav ul li a:hover::after {
     max-width: 500px;
     margin: 2rem auto;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(138, 43, 226, 0.2);
+    border: 1px solid rgba(255, 215, 0, 0.2);
 }
 
 .form-title {
@@ -409,7 +413,7 @@ nav ul li a:hover::after {
     width: 100%;
     padding: 1rem;
     background: rgba(40, 40, 40, 0.8);
-    border: 1px solid rgba(138, 43, 226, 0.3);
+    border: 1px solid rgba(217, 226, 43, 0.4);
     border-radius: 10px;
     font-size: 1rem;
     color: var(--light);
@@ -429,7 +433,7 @@ nav ul li a:hover::after {
     padding: 2.5rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(138, 43, 226, 0.2);
+    border: 1px solid rgba(255, 215, 0, 0.2);
 }
 
 .cart-item {
@@ -501,7 +505,7 @@ nav ul li a:hover::after {
     text-align: center;
     margin: 0 0.8rem;
     background: rgba(40, 40, 40, 0.8);
-    border: 1px solid rgba(138, 43, 226, 0.3);
+    border: 1px solid rgba(217, 226, 43, 0.4);
     border-radius: 5px;
     padding: 0.5rem;
     color: var(--light);
@@ -543,7 +547,7 @@ nav ul li a:hover::after {
 
 .checkout-btn:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(138, 43, 226, 0.4);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.4);
 }
 
 .checkout-btn i {
@@ -612,7 +616,7 @@ nav ul li a:hover::after {
     transform: scale(0.8);
     transition: transform 0.5s;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(138, 43, 226, 0.3);
+    border: 1px solid rgba(255, 215, 0, 0.3);
 }
 
 .success-animation.active .success-content {
@@ -634,7 +638,7 @@ footer {
     color: white;
     padding: 4rem 2rem 2rem;
     margin-top: 5rem;
-    border-top: 1px solid rgba(138, 43, 226, 0.3);
+    border-top: 1px solid rgba(255, 215, 0, 0.3);
 }
 
 .footer-content {
@@ -701,7 +705,7 @@ footer {
 
 .social-icons a:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
 }
 
 .copyright {
@@ -739,6 +743,79 @@ footer {
     50% { transform: translate(200px, 0) rotate(180deg); }
     75% { transform: translate(100px, -200px) rotate(270deg); }
     100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+/* Help Pages (FAQ, Exchange Policy, Payment Methods) */
+.help-container {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.help-section {
+    margin-bottom: 2rem;
+}
+
+.help-section:last-child {
+    margin-bottom: 0;
+}
+
+.help-title {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.help-title i {
+    margin-right: 0.8rem;
+    font-size: 1.4rem;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.help-content {
+    color: var(--light);
+    line-height: 1.6;
+}
+
+.help-list {
+    list-style: none;
+    margin-top: 0.5rem;
+}
+
+.help-list li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.help-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+}
+
+.payment-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.payment-icons i {
+    font-size: 2rem;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 /* Responsive */
@@ -783,4 +860,11 @@ footer {
     .cart-item-image {
         margin-bottom: 1rem;
     }
+}
+
+/* Espaçamento extra entre hero e destaques */
+.container > .hero + div[style] {
+    width: 100%;
+    height: 48px;
+    display: block;
 }

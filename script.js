@@ -2,51 +2,51 @@
 const products = [
     {
         id: 1,
-        name: "Camiseta Brasil",
+        name: "Camiseta Brazuca",
         price: 79.90,
-        image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80",
+        image: "assets/camisa.jpg",
         description: "Camiseta 100% algodão com estampa brasileira exclusiva.",
         badge: "Novo"
     },
     {
         id: 2,
-        name: "Calça Jeans Brazuca",
+        name: "Kit Brazuca Azul",
         price: 129.90,
-        image: "https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1526&q=80",
-        description: "Calça jeans moderna com corte brasileiro, perfeita para o dia a dia.",
+        image: "assets/Kit azul.jpg",
+        description: "Kit completo na cor azul, perfeito para o dia a dia.",
         badge: "Mais Vendido"
     },
     {
         id: 3,
-        name: "Vestido Floral",
+        name: "Kit Brazuca Marrom",
         price: 159.90,
-        image: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80",
-        description: "Vestido leve com estampa floral inspirada na natureza brasileira.",
+        image: "assets/Kit marrom.jpg",
+        description: "Kit completo na cor marrom, estilo e conforto garantidos.",
         badge: "Elegante"
     },
     {
         id: 4,
-        name: "Jaqueta Couro",
-        price: 299.90,
-        image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        description: "Jaqueta de couro legítimo com design urbano e sofisticado.",
+        name: "Kit Brazuca Verde",
+        price: 149.90,
+        image: "assets/Kit Verde.jpg",
+        description: "Kit completo na cor verde, visual moderno e sofisticado.",
         badge: "Premium"
     },
     {
         id: 5,
-        name: "Shorts Sarado",
+        name: "Short Brazuca",
         price: 69.90,
-        image: "https://images.unsplash.com/photo-1506629905607-e9de2a6bb646?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        description: "Shorts confortável ideal para o verão brasileiro.",
+        image: "assets/Short.jpg",
+        description: "Short confortável ideal para o verão brasileiro.",
         badge: "Verão"
     },
     {
         id: 6,
-        name: "Blusa de Frio",
-        price: 119.90,
-        image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1450&q=80",
-        description: "Blusa de frio com capuz, perfeita para os dias mais amenos.",
-        badge: "Conforto"
+        name: "Camiseta Oversized",
+        price: 89.90,
+        image: "assets/oversized.jpg",
+        description: "Camiseta oversized com design moderno e confortável.",
+        badge: "Tendência"
     }
 ];
 
