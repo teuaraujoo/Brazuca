@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazuca - Moda Brasileira</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+        <div class="floating-element" style="top: 10%; left: 5%; animation-delay: 0s;"></div>
+        <div class="floating-element" style="top: 20%; left: 80%; animation-delay: 1s;"></div>
+        <div class="floating-element" style="top: 60%; left: 10%; animation-delay: 2s;"></div>
+        <div class="floating-element" style="top: 80%; left: 70%; animation-delay: 3s;"></div>
+        <div class="floating-element" style="top: 40%; left: 90%; animation-delay: 4s;"></div>
+    </div>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo"><i class="fas fa-tshirt"></i>Brazuca</div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="#" onclick="showSection('products')"><i class="fas fa-shopping-bag"></i> Produtos</a></li>
+                <li><a href="#" onclick="showSection('about')"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                <li><a href="#" onclick="showSection('contact')"><i class="fas fa-envelope"></i> Contato</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="#" onclick="showSection('cart')">
+                <i class="fas fa-shopping-cart"></i> Carrinho
+                <span class="cart-count" id="cart-count">0</span>
+            </a>
+            <a href="#" onclick="showSection('login')">
+                <i class="fas fa-user"></i> Entrar
+            </a>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <div class="container">
+        <!-- Página inicial -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Moda Brasileira Autêntica</h1>
+                    <p>Descubra a elegância e o conforto das roupas Brazuca. Qualidade e estilo em cada peça, com designs inspirados na riqueza cultural do Brasil.</p>
+                    <a href="#" class="btn" onclick="showSection('products')"><i class="fas fa-arrow-right"></i> Explorar Coleção</a>
+                </div>
+            </div>
+
+            <div class="products-section">
+                <h2 class="section-title">Destaques da Temporada</h2>
+                <div class="products-grid" id="featured-products">
+                    <!-- Produtos em destaque serão inseridos aqui via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Página de produtos -->
+        <section id="products" class="section">
+            <h2 class="section-title">Nossa Coleção</h2>
+            <div class="products-grid" id="all-products">
+                <!-- Todos os produtos serão inseridos aqui via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Página de login -->
+        <section id="login" class="section">
+            <div class="form-container">
+                <h2 class="form-title">Acesse Sua Conta</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> E-mail</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password"><i class="fas fa-lock"></i> Senha</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;"><i class="fas fa-sign-in-alt"></i> Entrar</button>
+                </form>
+                <p style="text-align: center; margin-top: 1.5rem; color: rgba(255, 255, 255, 0.7);">
+                    Não tem uma conta? <a href="#" onclick="showSection('register')" style="color: var(--secondary);">Cadastre-se</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Página de registro -->
+        <section id="register" class="section">
+            <div class="form-container">
+                <h2 class="form-title">Criar Conta</h2>
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="reg-name"><i class="fas fa-user"></i> Nome completo</label>
+                        <input type="text" id="reg-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email"><i class="fas fa-envelope"></i> E-mail</label>
+                        <input type="email" id="reg-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password"><i class="fas fa-lock"></i> Senha</label>
+                        <input type="password" id="reg-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-confirm-password"><i class="fas fa-lock"></i> Confirmar senha</label>
+                        <input type="password" id="reg-confirm-password" required>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;"><i class="fas fa-user-plus"></i> Cadastrar</button>
+                </form>
+                <p style="text-align: center; margin-top: 1.5rem; color: rgba(255, 255, 255, 0.7);">
+                    Já tem uma conta? <a href="#" onclick="showSection('login')" style="color: var(--secondary);">Faça login</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Página do perfil -->
+        <section id="profile" class="section">
+            <div class="form-container">
+                <h2 class="form-title">Meu Perfil</h2>
+                <div class="form-group">
+                    <label for="profile-name"><i class="fas fa-user"></i> Nome completo</label>
+                    <input type="text" id="profile-name" value="João Silva">
+                </div>
+                <div class="form-group">
+                    <label for="profile-email"><i class="fas fa-envelope"></i> E-mail</label>
+                    <input type="email" id="profile-email" value="joao@exemplo.com">
+                </div>
+                <div class="form-group">
+                    <label for="profile-phone"><i class="fas fa-phone"></i> Telefone</label>
+                    <input type="tel" id="profile-phone" value="(11) 99999-9999">
+                </div>
+                <div class="form-group">
+                    <label for="profile-address"><i class="fas fa-map-marker-alt"></i> Endereço</label>
+                    <input type="text" id="profile-address" value="Rua das Flores, 123 - São Paulo, SP">
+                </div>
+                <button class="btn" style="width: 100%;"><i class="fas fa-save"></i> Salvar Alterações</button>
+            </div>
+        </section>
+
+        <!-- Página do carrinho -->
+        <section id="cart" class="section">
+            <h2 class="section-title">Meu Carrinho</h2>
+            <div class="cart-container">
+                <div id="cart-items">
+                    <!-- Itens do carrinho serão inseridos aqui via JavaScript -->
+                </div>
+                <div class="cart-summary">
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <span id="cart-total">R$ 0,00</span>
+                    </div>
+                    <button class="checkout-btn" onclick="showSection('checkout')"><i class="fas fa-credit-card"></i> Finalizar Compra</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página de checkout -->
+        <section id="checkout" class="section">
+            <div class="form-container">
+                <h2 class="form-title">Finalizar Compra</h2>
+                <form id="checkout-form">
+                    <div class="form-group">
+                        <label for="checkout-name"><i class="fas fa-user"></i> Nome completo</label>
+                        <input type="text" id="checkout-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout-email"><i class="fas fa-envelope"></i> E-mail</label>
+                        <input type="email" id="checkout-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout-address"><i class="fas fa-map-marker-alt"></i> Endereço de entrega</label>
+                        <input type="text" id="checkout-address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout-card"><i class="fas fa-credit-card"></i> Número do cartão</label>
+                        <input type="text" id="checkout-card" required>
+                    </div>
+                    <div style="display: flex; gap: 1rem;">
+                        <div class="form-group" style="flex: 1;">
+                            <label for="checkout-expiry">Validade</label>
+                            <input type="text" id="checkout-expiry" placeholder="MM/AA" required>
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label for="checkout-cvv">CVV</label>
+                            <input type="text" id="checkout-cvv" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;"><i class="fas fa-check-circle"></i> Confirmar Pagamento</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Páginas adicionais -->
+        <section id="about" class="section">
+            <h2 class="section-title">Sobre a Brazuca</h2>
+            <div style="background: var(--card-bg); padding: 2.5rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); backdrop-filter: blur(10px); border: 1px solid rgba(138, 43, 226, 0.2);">
+                <p style="margin-bottom: 1.5rem; line-height: 1.6;">A Brazuca nasceu da paixão pela moda brasileira e pela vontade de oferecer produtos de qualidade que representam a diversidade e a riqueza cultural do nosso país.</p>
+                <p style="margin-bottom: 1.5rem; line-height: 1.6;">Nossas peças são desenvolvidas com materiais sustentáveis e processos éticos, garantindo conforto, durabilidade e estilo em cada criação. Trabalhamos com artesãos locais para promover a economia criativa brasileira.</p>
+                <p style="line-height: 1.6;">Junte-se a nós nessa jornada pela moda autenticamente brasileira!</p>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="form-container">
+                <form>
+                    <div class="form-group">
+                        <label for="contact-name"><i class="fas fa-user"></i> Nome</label>
+                        <input type="text" id="contact-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email"><i class="fas fa-envelope"></i> E-mail</label>
+                        <input type="email" id="contact-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message"><i class="fas fa-comment"></i> Mensagem</label>
+                        <textarea id="contact-message" rows="5" style="width: 100%; padding: 1rem; background: rgba(40, 40, 40, 0.8); border: 1px solid rgba(138, 43, 226, 0.3); border-radius: 10px; color: var(--light);" required></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;"><i class="fas fa-paper-plane"></i> Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Animação de sucesso -->
+    <div class="success-animation" id="success-animation">
+        <div class="success-content">
+            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+            <h2>Compra realizada com sucesso!</h2>
+            <p>Obrigado por comprar na Brazuca. Seu pedido será enviado em breve.</p>
+            <button class="btn" onclick="hideSuccessAnimation()">Continuar Comprando</button>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Brazuca</h3>
+                <p>Moda brasileira autêntica com qualidade e estilo.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#" onclick="showSection('home')"><i class="fas fa-chevron-right"></i> Início</a></li>
+                    <li><a href="#" onclick="showSection('products')"><i class="fas fa-chevron-right"></i> Produtos</a></li>
+                    <li><a href="#" onclick="showSection('about')"><i class="fas fa-chevron-right"></i> Sobre</a></li>
+                    <li><a href="#" onclick="showSection('contact')"><i class="fas fa-chevron-right"></i> Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Ajuda</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Política de Trocas</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Formas de Pagamento</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Rastrear Pedido</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> contato@brazuca.com</li>
+                    <li><i class="fas fa-phone"></i> (11) 1234-5678</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Av. Paulista, 1000 - São Paulo, SP</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Brazuca. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
