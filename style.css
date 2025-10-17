@@ -17,11 +17,16 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background: linear-gradient(135deg, var(--darker), var(--dark));
     color: var(--light);
     min-height: 100vh;
-    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
